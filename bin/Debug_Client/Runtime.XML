@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Runtime</name>
+    </assembly>
+    <members>
+        <member name="T:Util">
+            <summary>
+            工具
+            </summary>
+        </member>
+        <member name="M:Util.FindGo``1(UnityEngine.GameObject,System.String,System.Boolean)">
+            <summary>
+            查找
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="parent"></param>
+            <param name="name"></param>
+            <param name="includeInactive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Util.FindGo(UnityEngine.GameObject,System.String,System.Boolean)">
+            <summary>
+            查找
+            </summary>
+            <param name="parent"></param>
+            <param name="name"></param>
+            <param name="includeInactive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Util.FindCo``1(UnityEngine.GameObject,System.String,System.Boolean)">
+            <summary>
+            查找
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="parent"></param>
+            <param name="name"></param>
+            <param name="includeInactive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Util.FindCo``1(UnityEngine.Transform,System.String,System.Boolean)">
+            <summary>
+            查找
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="parent"></param>
+            <param name="name"></param>
+            <param name="includeInactive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Util.DestroyAllChildrenImmediate(UnityEngine.GameObject)">
+            <summary>
+            立即删除所有儿子结点
+            </summary>
+            <param name="go"></param>
+        </member>
+        <member name="M:Util.DestroyAllChildren(UnityEngine.GameObject)">
+            <summary>
+            删除所有儿子结点
+            </summary>
+            <param name="go"></param>
+        </member>
+        <member name="M:Util.DestroyAllChildren(UnityEngine.Component)">
+            <summary>
+            删除所有儿子结点
+            </summary>
+            <param name="comp"></param>
+        </member>
+        <member name="T:Singleton`1">
+            <summary>
+            单例类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:Singleton`1.m_instance">
+            <summary>
+            单例
+            </summary>
+        </member>
+        <member name="P:Singleton`1.Instance">
+            <summary>
+            单例
+            </summary>
+        </member>
+        <member name="T:SingletonMono`1">
+            <summary>
+            <para>单例Mono</para>
+            <para>存在形式优先级如下：</para>
+            <para>初始在Hierarchy</para>
+            <para>有和脚本同名的悬挂点</para>
+            <para>在finalFather上或其子孙上</para>
+            <para>新挂在finalFather上</para>
+            </summary>
+        </member>
+        <member name="F:SingletonMono`1.m_instance">
+            <summary>
+            单例
+            </summary>
+        </member>
+        <member name="F:SingletonMono`1.finalFather">
+            <summary>
+            最后无法找到，在这个父节点挂载
+            </summary>
+        </member>
+        <member name="P:SingletonMono`1.Instance">
+            <summary>
+            单例
+            </summary>
+        </member>
+        <member name="T:BaseTrigger">
+            <summary>
+            触发器基类
+            </summary>
+        </member>
+        <member name="F:BaseTrigger.m_iUniqueID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="F:BaseTrigger.m_bIsLive">
+            <summary>
+            是否还有效
+            </summary>
+        </member>
+        <member name="F:BaseTrigger.m_Father">
+            <summary>
+            父亲
+            </summary>
+        </member>
+        <member name="M:BaseTrigger.Init(BaseTrigger)">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:BaseTrigger.OnFatherTriggerFinish">
+            <summary>
+            父节点结束
+            </summary>
+        </member>
+        <member name="M:BaseTrigger.OnTrigger">
+            <summary>
+            触发
+            </summary>
+        </member>
+        <member name="M:BaseTrigger.OnFinish">
+            <summary>
+            结束
+            </summary>
+        </member>
+        <member name="E:BaseTrigger.onTriggerFinish">
+            <summary>
+            触发器结束事件
+            </summary>
+        </member>
+        <member name="T:BaseTrigger.OnTriggerFinish">
+            <summary>
+            触发器结束
+            </summary>
+        </member>
+        <member name="T:TriggerTimer">
+            <summary>
+            时间触发器
+            </summary>
+        </member>
+        <member name="F:TriggerTimer.m_fTimerTime">
+            <summary>
+            等待时长
+            </summary>
+        </member>
+        <member name="M:TriggerTimer.Init(BaseTrigger)">
+            <summary>
+            初始化
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:TriggerTimer.OnTrigger">
+            <summary>
+            触发
+            </summary>
+        </member>
+        <member name="M:TriggerTimer.CountTime">
+            <summary>
+            计时
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
