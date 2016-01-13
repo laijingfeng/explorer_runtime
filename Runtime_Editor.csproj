@@ -49,10 +49,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\Tools\Util.cs" />
-    <Compile Include="Code\Trigger\BaseTrigger.cs" />
+    <Compile Include="Code\Trigger\TriggerBase.cs" />
     <Compile Include="Code\Trigger\TriggerTimer.cs" />
     <Compile Include="Code\Windows\Singleton.cs" />
-    <Compile Include="Editor\Trigger\BaseTriggerInspector.cs" />
+    <Compile Include="Editor\Trigger\TriggerBaseInspector.cs" />
     <Compile Include="Editor\Trigger\TriggerTimerInspector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

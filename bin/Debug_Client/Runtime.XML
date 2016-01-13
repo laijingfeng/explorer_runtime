@@ -4,6 +4,84 @@
         <name>Runtime</name>
     </assembly>
     <members>
+        <member name="T:TriggerTimer">
+            <summary>
+            时间触发器
+            </summary>
+        </member>
+        <member name="T:TriggerBase">
+            <summary>
+            触发器基类
+            </summary>
+        </member>
+        <member name="F:TriggerBase.m_iUniqueID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="F:TriggerBase.m_bIsLive">
+            <summary>
+            是否还有效
+            </summary>
+        </member>
+        <member name="F:TriggerBase.m_Father">
+            <summary>
+            父亲
+            </summary>
+        </member>
+        <member name="M:TriggerBase.Init(TriggerBase)">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:TriggerBase.OnFatherTriggerFinish(TriggerBase)">
+            <summary>
+            父节点结束
+            </summary>
+            <param name="trigger"></param>
+        </member>
+        <member name="M:TriggerBase.OnTrigger">
+            <summary>
+            触发
+            </summary>
+        </member>
+        <member name="M:TriggerBase.OnFinish">
+            <summary>
+            结束
+            </summary>
+        </member>
+        <member name="E:TriggerBase.onTriggerFinish">
+            <summary>
+            触发器结束事件
+            </summary>
+        </member>
+        <member name="T:TriggerBase.OnTriggerFinish">
+            <summary>
+            触发器结束
+            </summary>
+        </member>
+        <member name="F:TriggerTimer.m_fTimerTime">
+            <summary>
+            等待时长
+            </summary>
+        </member>
+        <member name="M:TriggerTimer.Init(TriggerBase)">
+            <summary>
+            初始化
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:TriggerTimer.OnTrigger">
+            <summary>
+            触发
+            </summary>
+        </member>
+        <member name="M:TriggerTimer.CountTime">
+            <summary>
+            计时
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Util">
             <summary>
             工具
@@ -106,83 +184,6 @@
             <summary>
             单例
             </summary>
-        </member>
-        <member name="T:BaseTrigger">
-            <summary>
-            触发器基类
-            </summary>
-        </member>
-        <member name="F:BaseTrigger.m_iUniqueID">
-            <summary>
-            ID
-            </summary>
-        </member>
-        <member name="F:BaseTrigger.m_bIsLive">
-            <summary>
-            是否还有效
-            </summary>
-        </member>
-        <member name="F:BaseTrigger.m_Father">
-            <summary>
-            父亲
-            </summary>
-        </member>
-        <member name="M:BaseTrigger.Init(BaseTrigger)">
-            <summary>
-            初始化
-            </summary>
-        </member>
-        <member name="M:BaseTrigger.OnFatherTriggerFinish">
-            <summary>
-            父节点结束
-            </summary>
-        </member>
-        <member name="M:BaseTrigger.OnTrigger">
-            <summary>
-            触发
-            </summary>
-        </member>
-        <member name="M:BaseTrigger.OnFinish">
-            <summary>
-            结束
-            </summary>
-        </member>
-        <member name="E:BaseTrigger.onTriggerFinish">
-            <summary>
-            触发器结束事件
-            </summary>
-        </member>
-        <member name="T:BaseTrigger.OnTriggerFinish">
-            <summary>
-            触发器结束
-            </summary>
-        </member>
-        <member name="T:TriggerTimer">
-            <summary>
-            时间触发器
-            </summary>
-        </member>
-        <member name="F:TriggerTimer.m_fTimerTime">
-            <summary>
-            等待时长
-            </summary>
-        </member>
-        <member name="M:TriggerTimer.Init(BaseTrigger)">
-            <summary>
-            初始化
-            </summary>
-            <param name="config"></param>
-        </member>
-        <member name="M:TriggerTimer.OnTrigger">
-            <summary>
-            触发
-            </summary>
-        </member>
-        <member name="M:TriggerTimer.CountTime">
-            <summary>
-            计时
-            </summary>
-            <returns></returns>
         </member>
     </members>
 </doc>

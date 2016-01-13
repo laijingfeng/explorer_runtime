@@ -4,65 +4,83 @@
         <name>Runtime</name>
     </assembly>
     <members>
-        <member name="F:BaseTriggerInspector.m_BaseTrigger">
+        <member name="T:TriggerTimer">
             <summary>
-            基类
+            时间触发器
             </summary>
         </member>
-        <member name="M:BaseTriggerInspector.DrawAttr">
-            <summary>
-            绘制属性
-            </summary>
-        </member>
-        <member name="T:BaseTrigger">
+        <member name="T:TriggerBase">
             <summary>
             触发器基类
             </summary>
         </member>
-        <member name="F:BaseTrigger.m_iUniqueID">
+        <member name="F:TriggerBase.m_iUniqueID">
             <summary>
             ID
             </summary>
         </member>
-        <member name="F:BaseTrigger.m_bIsLive">
+        <member name="F:TriggerBase.m_bIsLive">
             <summary>
             是否还有效
             </summary>
         </member>
-        <member name="F:BaseTrigger.m_Father">
+        <member name="F:TriggerBase.m_Father">
             <summary>
             父亲
             </summary>
         </member>
-        <member name="M:BaseTrigger.Init(BaseTrigger)">
+        <member name="M:TriggerBase.Init(TriggerBase)">
             <summary>
             初始化
             </summary>
         </member>
-        <member name="M:BaseTrigger.OnFatherTriggerFinish">
+        <member name="M:TriggerBase.OnFatherTriggerFinish(TriggerBase)">
             <summary>
             父节点结束
             </summary>
+            <param name="trigger"></param>
         </member>
-        <member name="M:BaseTrigger.OnTrigger">
+        <member name="M:TriggerBase.OnTrigger">
             <summary>
             触发
             </summary>
         </member>
-        <member name="M:BaseTrigger.OnFinish">
+        <member name="M:TriggerBase.OnFinish">
             <summary>
             结束
             </summary>
         </member>
-        <member name="E:BaseTrigger.onTriggerFinish">
+        <member name="E:TriggerBase.onTriggerFinish">
             <summary>
             触发器结束事件
             </summary>
         </member>
-        <member name="T:BaseTrigger.OnTriggerFinish">
+        <member name="T:TriggerBase.OnTriggerFinish">
             <summary>
             触发器结束
             </summary>
+        </member>
+        <member name="F:TriggerTimer.m_fTimerTime">
+            <summary>
+            等待时长
+            </summary>
+        </member>
+        <member name="M:TriggerTimer.Init(TriggerBase)">
+            <summary>
+            初始化
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:TriggerTimer.OnTrigger">
+            <summary>
+            触发
+            </summary>
+        </member>
+        <member name="M:TriggerTimer.CountTime">
+            <summary>
+            计时
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:Util">
             <summary>
@@ -126,6 +144,26 @@
             </summary>
             <param name="comp"></param>
         </member>
+        <member name="F:TriggerBaseInspector.m_BaseTrigger">
+            <summary>
+            基类
+            </summary>
+        </member>
+        <member name="M:TriggerBaseInspector.DrawAttr">
+            <summary>
+            绘制属性
+            </summary>
+        </member>
+        <member name="F:TriggerTimerInspector.m_TriggerTimer">
+            <summary>
+            时间触发器
+            </summary>
+        </member>
+        <member name="M:TriggerTimerInspector.DrawAttr">
+            <summary>
+            绘制属性
+            </summary>
+        </member>
         <member name="T:Singleton`1">
             <summary>
             单例类
@@ -165,43 +203,6 @@
         <member name="P:SingletonMono`1.Instance">
             <summary>
             单例
-            </summary>
-        </member>
-        <member name="T:TriggerTimer">
-            <summary>
-            时间触发器
-            </summary>
-        </member>
-        <member name="F:TriggerTimer.m_fTimerTime">
-            <summary>
-            等待时长
-            </summary>
-        </member>
-        <member name="M:TriggerTimer.Init(BaseTrigger)">
-            <summary>
-            初始化
-            </summary>
-            <param name="config"></param>
-        </member>
-        <member name="M:TriggerTimer.OnTrigger">
-            <summary>
-            触发
-            </summary>
-        </member>
-        <member name="M:TriggerTimer.CountTime">
-            <summary>
-            计时
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="F:TriggerTimerInspector.m_TriggerTimer">
-            <summary>
-            时间触发器
-            </summary>
-        </member>
-        <member name="M:TriggerTimerInspector.DrawAttr">
-            <summary>
-            绘制属性
             </summary>
         </member>
     </members>

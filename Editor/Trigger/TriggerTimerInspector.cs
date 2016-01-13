@@ -3,7 +3,7 @@ using UnityEditor;
 using System.Collections;
 
 [CustomEditor(typeof(TriggerTimer))]
-public class TriggerTimerInspector : BaseTriggerInspector
+public class TriggerTimerInspector : TriggerBaseInspector
 {
     /// <summary>
     /// 时间触发器

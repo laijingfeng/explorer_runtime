@@ -4,7 +4,7 @@ using System.Collections;
 /// <summary>
 /// 时间触发器
 /// </summary>
-public class TriggerTimer : BaseTrigger
+public class TriggerTimer : TriggerBase
 {
     /// <summary>
     /// 等待时长
@@ -15,7 +15,7 @@ public class TriggerTimer : BaseTrigger
     /// 初始化
     /// </summary>
     /// <param name="config"></param>
-    public override void Init(BaseTrigger config)
+    public override void Init(TriggerBase config)
     {
         base.Init(config);
 

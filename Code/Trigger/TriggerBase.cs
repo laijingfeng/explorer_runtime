@@ -4,7 +4,7 @@ using System.Collections;
 /// <summary>
 /// 触发器基类
 /// </summary>
-public class BaseTrigger : MonoBehaviour
+public class TriggerBase : MonoBehaviour
 {
     /// <summary>
     /// ID
@@ -14,7 +14,7 @@ public class BaseTrigger : MonoBehaviour
     /// <summary>
     /// 触发器结束
     /// </summary>
-    public delegate void OnTriggerFinish();
+    public delegate void OnTriggerFinish(TriggerBase trigger);
 
     /// <summary>
     /// 触发器结束事件
@@ -29,12 +29,12 @@ public class BaseTrigger : MonoBehaviour
     /// <summary>
     /// 父亲
     /// </summary>
-    public BaseTrigger m_Father;
+    public TriggerBase m_Father;
 
     /// <summary>
     /// 初始化
     /// </summary>
-    public virtual void Init(BaseTrigger config)
+    public virtual void Init(TriggerBase config)
     {
         m_Father = config.m_Father;
     }
@@ -54,7 +54,8 @@ public class BaseTrigger : MonoBehaviour
     /// <summary>
     /// 父节点结束
     /// </summary>
-    public void OnFatherTriggerFinish()
+    /// <param name="trigger"></param>
+    public void OnFatherTriggerFinish(TriggerBase trigger)
     {
         OnTrigger();
     }
@@ -76,7 +77,7 @@ public class BaseTrigger : MonoBehaviour
 
         if (onTriggerFinish != null)
         {
-            onTriggerFinish();
+            onTriggerFinish(this);
         }
 
         if(this.transform.gameObject != null)
