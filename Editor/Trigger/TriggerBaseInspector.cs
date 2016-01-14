@@ -22,5 +22,6 @@ public class TriggerBaseInspector : Editor
     public virtual void DrawAttr()
     {
         m_BaseTrigger.m_Father = EditorGUILayout.ObjectField("触发者", m_BaseTrigger.m_Father, typeof(TriggerBase), true) as TriggerBase;
+        m_BaseTrigger.m_bIsPassTrigger = EditorGUILayout.Toggle("是否是通关触发器", m_BaseTrigger.m_bIsPassTrigger);
     }
 }

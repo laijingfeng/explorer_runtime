@@ -19,6 +19,11 @@
             ID
             </summary>
         </member>
+        <member name="F:TriggerBase.m_bIsPassTrigger">
+            <summary>
+            是否是通关触发器
+            </summary>
+        </member>
         <member name="F:TriggerBase.m_bIsLive">
             <summary>
             是否还有效
@@ -32,6 +37,11 @@
         <member name="M:TriggerBase.Init(TriggerBase)">
             <summary>
             初始化
+            </summary>
+        </member>
+        <member name="M:TriggerBase.Start">
+            <summary>
+            开始
             </summary>
         </member>
         <member name="M:TriggerBase.OnFatherTriggerFinish(TriggerBase)">

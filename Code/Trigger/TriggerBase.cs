@@ -12,6 +12,11 @@ public class TriggerBase : MonoBehaviour
     public int m_iUniqueID;
 
     /// <summary>
+    /// 是否是通关触发器
+    /// </summary>
+    public bool m_bIsPassTrigger;
+
+    /// <summary>
     /// 触发器结束
     /// </summary>
     public delegate void OnTriggerFinish(TriggerBase trigger);
@@ -36,9 +41,14 @@ public class TriggerBase : MonoBehaviour
     /// </summary>
     public virtual void Init(TriggerBase config)
     {
+        m_iUniqueID = config.m_iUniqueID;
+        m_bIsPassTrigger = config.m_bIsPassTrigger;
         m_Father = config.m_Father;
     }
 
+    /// <summary>
+    /// 开始
+    /// </summary>
     public virtual void Start()
     {
         if (m_Father == null)
@@ -86,7 +96,7 @@ public class TriggerBase : MonoBehaviour
         }
     }
 
-    void OnDispose()
+    void OnDestroy()
     {
         if (m_bIsLive)
         {
