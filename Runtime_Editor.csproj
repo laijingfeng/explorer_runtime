@@ -48,6 +48,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\Character\PlayerAttr.cs" />
     <Compile Include="Code\Tools\Util.cs" />
     <Compile Include="Code\Trigger\TriggerBase.cs" />
     <Compile Include="Code\Trigger\TriggerTimer.cs" />

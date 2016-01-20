@@ -195,5 +195,84 @@
             单例
             </summary>
         </member>
+        <member name="T:PlayerAttr">
+            <summary>
+            <para>玩家属性</para>
+            <para>为了方便编辑器调试，变量都设置Public</para>
+            </summary>
+        </member>
+        <member name="F:PlayerAttr.m_iBlood">
+            <summary>
+            血量
+            </summary>
+        </member>
+        <member name="F:PlayerAttr.m_iJumpCount">
+            <summary>
+            连跳次数
+            </summary>
+        </member>
+        <member name="F:PlayerAttr.m_fJumpForce">
+            <summary>
+            起跳力
+            </summary>
+        </member>
+        <member name="F:PlayerAttr.m_fMaxSpeed">
+            <summary>
+            移动最大速度
+            </summary>
+        </member>
+        <member name="F:PlayerAttr.m_fMoveForce">
+            <summary>
+            移动力
+            </summary>
+        </member>
+        <member name="F:PlayerAttr.onAttrChange">
+            <summary>
+            属性变化
+            </summary>
+        </member>
+        <member name="M:PlayerAttr.Init(System.Int32,System.Int32,PlayerAttr.OnAttrChange)">
+            <summary>
+            初始化
+            </summary>
+            <param name="iBlood">血量</param>
+            <param name="iJumpCount">连跳次数</param>
+            <param name="attrChange">属性变化通知</param>
+        </member>
+        <member name="M:PlayerAttr.PostChange">
+            <summary>
+            通知变化
+            </summary>
+        </member>
+        <member name="P:PlayerAttr.Blood">
+            <summary>
+            血量
+            </summary>
+        </member>
+        <member name="P:PlayerAttr.JumpCount">
+            <summary>
+            连跳次数
+            </summary>
+        </member>
+        <member name="P:PlayerAttr.JumpForce">
+            <summary>
+            跳跃力
+            </summary>
+        </member>
+        <member name="P:PlayerAttr.MaxSpeed">
+            <summary>
+            移动最大速度
+            </summary>
+        </member>
+        <member name="P:PlayerAttr.MoveForce">
+            <summary>
+            移动力
+            </summary>
+        </member>
+        <member name="T:PlayerAttr.OnAttrChange">
+            <summary>
+            属性变化
+            </summary>
+        </member>
     </members>
 </doc>
