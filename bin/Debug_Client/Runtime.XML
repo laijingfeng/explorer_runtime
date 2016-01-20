@@ -34,11 +34,6 @@
             父亲
             </summary>
         </member>
-        <member name="M:TriggerBase.Init(TriggerBase)">
-            <summary>
-            初始化
-            </summary>
-        </member>
         <member name="M:TriggerBase.Start">
             <summary>
             开始
@@ -75,11 +70,11 @@
             等待时长
             </summary>
         </member>
-        <member name="M:TriggerTimer.Init(TriggerBase)">
+        <member name="F:TriggerTimer.m_strItemName">
             <summary>
-            初始化
+            <para>物体名</para>
+            <para>空则是隐形的</para>
             </summary>
-            <param name="config"></param>
         </member>
         <member name="M:TriggerTimer.OnTrigger">
             <summary>
@@ -272,6 +267,435 @@
         <member name="T:PlayerAttr.OnAttrChange">
             <summary>
             属性变化
+            </summary>
+        </member>
+        <member name="T:Remover">
+            <summary>
+            移除器
+            </summary>
+        </member>
+        <member name="F:Remover.splash">
+            <summary>
+            死亡动画
+            </summary>
+        </member>
+        <member name="T:Level">
+            <summary>
+            关卡
+            </summary>
+        </member>
+        <member name="F:Level.m_instance">
+            <summary>
+            单例
+            </summary>
+        </member>
+        <member name="F:Level.m_PlayerPos">
+            <summary>
+            主角位置
+            </summary>
+        </member>
+        <member name="F:Level.m_listTrigger">
+            <summary>
+            触发器
+            </summary>
+        </member>
+        <member name="M:Level.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:Level.OnTriggerDead(TriggerBase)">
+            <summary>
+            触发器结束
+            </summary>
+            <param name="trigger"></param>
+        </member>
+        <member name="M:Level.CreateTrigger">
+            <summary>
+            创建触发器
+            </summary>
+        </member>
+        <member name="P:Level.Instance">
+            <summary>
+            单例
+            </summary>
+        </member>
+        <member name="E:Level.onTriggerFinish">
+            <summary>
+            触发器结束事件
+            </summary>
+        </member>
+        <member name="T:Level.OnTriggerFinish">
+            <summary>
+            触发器结束
+            </summary>
+        </member>
+        <member name="T:TriggerBoss">
+            <summary>
+            Boss触发器
+            </summary>
+        </member>
+        <member name="F:TriggerBoss.m_strBossName">
+            <summary>
+            Boss名称
+            </summary>
+        </member>
+        <member name="M:TriggerBoss.OnTrigger">
+            <summary>
+            触发
+            </summary>
+        </member>
+        <member name="T:TriggerRange">
+            <summary>
+            范围触发器
+            </summary>
+        </member>
+        <member name="F:TriggerRange.m_strItemName">
+            <summary>
+            <para>物体名</para>
+            <para>空则是隐形的</para>
+            </summary>
+        </member>
+        <member name="M:TriggerRange.OnTrigger">
+            <summary>
+            触发
+            </summary>
+        </member>
+        <member name="T:TriggerModelLoader">
+            <summary>
+            触发器模型加载器
+            </summary>
+        </member>
+        <member name="F:TriggerModelLoader.m_Trigger">
+            <summary>
+            触发器
+            </summary>
+        </member>
+        <member name="F:TriggerModelLoader.onModelLoaded">
+            <summary>
+            模型加载成功
+            </summary>
+        </member>
+        <member name="M:TriggerModelLoader.Get(TriggerBase)">
+            <summary>
+            获取
+            </summary>
+            <param name="trigger"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TriggerModelLoader.Load(System.String)">
+            <summary>
+            加载
+            </summary>
+            <param name="modelPath">模型名，Item/Name</param>
+        </member>
+        <member name="M:TriggerModelLoader.OnLoaded(Resource)">
+            <summary>
+            <para>模型加载成功</para>
+            </summary>
+            <param name="res"></param>
+        </member>
+        <member name="T:TriggerModelLoader.OnModelLoaded">
+            <summary>
+            模型加载成功
+            </summary>
+            <param name="go"></param>
+        </member>
+        <member name="T:ResCommonAttr">
+            <summary>
+            <para>相同两个资源中可以互相引用的属性</para>
+            <para>用类包起来作为引用</para>
+            <para>和旧版本有同步到2015.03.14</para>
+            </summary>
+        </member>
+        <member name="F:ResCommonAttr.m_bIsLoadFaild">
+            <summary>
+            是否加载失败
+            </summary>
+        </member>
+        <member name="F:ResCommonAttr.m_fileName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="F:ResCommonAttr.m_bIsLoaded">
+            <summary>
+            <para>是否加载完成</para>
+            <para>成功/失败都是完成</para>
+            </summary>
+        </member>
+        <member name="F:ResCommonAttr.m_mainAsset">
+            <summary>
+            mainAsset
+            </summary>
+        </member>
+        <member name="F:ResCommonAttr.m_assetBundle">
+            <summary>
+            AssetBundle
+            </summary>
+        </member>
+        <member name="M:ResCommonAttr.#ctor(System.String)">
+            <summary>
+            构造
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="P:ResCommonAttr.IsLoadFaild">
+            <summary>
+            是否加载失败
+            </summary>
+        </member>
+        <member name="P:ResCommonAttr.FileName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="P:ResCommonAttr.IsLoaded">
+            <summary>
+            是否加载完成
+            </summary>
+        </member>
+        <member name="T:Resource">
+            <summary>
+            资源
+            </summary>
+        </member>
+        <member name="M:Resource.RES_UPDATE_PATH(System.String)">
+            <summary>
+            更新路径
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Resource.RES_PATH(System.String)">
+            <summary>
+            资源路径
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Resource.aaa">
+            <summary>
+            清理
+            </summary>
+        </member>
+        <member name="M:Resource.CheckDoneWWW(System.Boolean)">
+            <summary>
+            <para>检查是否加载完成</para>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Resource.Update">
+            <summary>
+            后台加载使用，优先级低
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Resource.ClearEvent">
+            <summary>
+            清除事件
+            </summary>
+        </member>
+        <member name="F:Resource.m_www">
+            <summary>
+            加载器
+            </summary>
+        </member>
+        <member name="F:Resource.m_ResCommonAttr">
+            <summary>
+            同一资源共用属性
+            </summary>
+        </member>
+        <member name="F:Resource.permanent">
+            <summary>
+            是否常驻内存（不参与资源回收）
+            </summary>
+        </member>
+        <member name="F:Resource.bForeceLoadFromPack">
+            <summary>
+            从StreamingPath寻找
+            </summary>
+        </member>
+        <member name="F:ResourceManager.lUpdateInitTicks">
+            <summary>
+            开始运行的时间
+            </summary>
+        </member>
+        <member name="F:ResourceManager.fUpdateBeginTime">
+            <summary>
+            开始更新的时间
+            </summary>
+        </member>
+        <member name="F:ResourceManager.fUpdateTimePerFrame">
+            <summary>
+            每次更新所占的时间长度限制 小于10ms; 小于等于0, 不做任何限制
+            </summary>
+        </member>
+        <member name="M:ResourceManager.Clear">
+            <summary>
+            清理资源
+            </summary>
+        </member>
+        <member name="M:ResourceManager.IsIdle">
+            <summary>
+            资源管理器是否空闲
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ResourceManager.LoadResource(System.String)">
+            <summary>
+            加载资源
+            </summary>
+            <param name="name">name is relative to "AssetBundles/"</param>
+            <returns></returns>
+        </member>
+        <member name="M:ResourceManager.LoadResourceBK(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            后台加载
+            </summary>
+            <param name="name"></param>
+            <param name="loadFailedShowError"></param>
+            <param name="bLoadFromStreamPath">强制必须从包内的StreamingAssets中读取资源</param>
+            <returns></returns>
+        </member>
+        <member name="M:ResourceManager.LoadResourcePermanent(System.String)">
+            <summary>
+            加载永久性资源
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ResourceManager.LoadResource(System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            加载资源
+            </summary>
+            <param name="name">相对于"AssetBundles/"</param>
+            <param name="loadFailedShowError">加载失败显示错误</param>
+            <param name="background">是否后台加载</param>
+            <param name="permanent">是否永久性</param>
+            <param name="skipCacheRes">是否跳过缓存资源</param>
+            <param name="bLoadFromStreamPath">是否强制只能从包内StreamPath加载</param>
+            <returns></returns>
+        </member>
+        <member name="M:ResourceManager.OnResLoadFinished(Resource)">
+            <summary>
+            资源加载完成
+            </summary>
+            <param name="res"></param>
+        </member>
+        <member name="M:ResourceManager.CalculateLoadingTimeScale">
+            <summary>
+            计算加载时间缩放
+            </summary>
+        </member>
+        <member name="M:ResourceManager.BeginLoadingDependence">
+            <summary>
+            开始加载依赖性资源
+            </summary>
+        </member>
+        <member name="M:ResourceManager.EndLoadingDependence">
+            <summary>
+            结束加载依赖性资源
+            </summary>
+        </member>
+        <member name="F:ResourceManager.loadedDic">
+            <summary>
+            加载好的资源
+            </summary>
+        </member>
+        <member name="F:ResourceManager.gcList">
+            <summary>
+            垃圾列表
+            </summary>
+        </member>
+        <member name="F:ResourceManager.MAX_INLOADING_RESCOUNT">
+            <summary>
+            最大同时下载资源数
+            </summary>
+        </member>
+        <member name="F:ResourceManager.loadingQueue">
+            <summary>
+            <para>前台等待队列</para>
+            <para>前台资源加载可乱序，解析暂时不可乱序(ToDo: Fence机制)</para>
+            </summary>
+        </member>
+        <member name="F:ResourceManager.curLoadingRes_foreground">
+            <summary>
+            前台正在加载队列
+            </summary>
+        </member>
+        <member name="F:ResourceManager.loadingBackGround">
+            <summary>
+            <para>后台资源可以乱序</para>
+            <para>后台加载等待队列</para>
+            </summary>
+        </member>
+        <member name="F:ResourceManager.curLoadingRes_background">
+            <summary>
+            <para>后台正在加载队列</para>
+            <para>为什么要用数组</para>
+            </summary>
+        </member>
+        <member name="F:ResourceManager.isLoadingDependence">
+            <summary>
+            是否加载依赖的资源
+            </summary>
+        </member>
+        <member name="T:Buffer">
+            <summary>
+            Buffer
+            </summary>
+        </member>
+        <member name="F:Buffer.m_PlayerAttr">
+            <summary>
+            玩家属性
+            </summary>
+        </member>
+        <member name="F:Buffer.m_type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="F:Buffer.m_iValue">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="F:Buffer.m_fTime">
+            <summary>
+            <para>作用时长</para>
+            <para>小于等于0表示永久</para>
+            </summary>
+        </member>
+        <member name="M:Buffer.Work(Buffer)">
+            <summary>
+            工作
+            </summary>
+        </member>
+        <member name="M:Buffer.WorkBuff">
+            <summary>
+            执行Buff
+            </summary>
+        </member>
+        <member name="M:Buffer.ChangeAttr(System.Boolean)">
+            <summary>
+            变化属性
+            </summary>
+            <param name="add"></param>
+        </member>
+        <member name="T:Buffer.BuffType">
+            <summary>
+            Buff类型
+            </summary>
+        </member>
+        <member name="F:Buffer.BuffType.BLOOD">
+            <summary>
+            加血
+            </summary>
+        </member>
+        <member name="F:Buffer.BuffType.JUMP_COUNT">
+            <summary>
+            连跳次数
             </summary>
         </member>
     </members>

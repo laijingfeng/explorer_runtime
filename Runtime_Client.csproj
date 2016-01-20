@@ -48,9 +48,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\Character\Buffer.cs" />
     <Compile Include="Code\Character\PlayerAttr.cs" />
+    <Compile Include="Code\Other\Remover.cs" />
+    <Compile Include="Code\Resource\ResourceManager.cs" />
+    <Compile Include="Code\Scene\Level.cs" />
     <Compile Include="Code\Tools\Util.cs" />
     <Compile Include="Code\Trigger\TriggerBase.cs" />
+    <Compile Include="Code\Trigger\TriggerBoss.cs" />
+    <Compile Include="Code\Trigger\TriggerModelLoader.cs" />
+    <Compile Include="Code\Trigger\TriggerRange.cs" />
     <Compile Include="Code\Trigger\TriggerTimer.cs" />
     <Compile Include="Code\Windows\Singleton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

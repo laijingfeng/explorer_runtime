@@ -25,6 +25,7 @@ public class PlayerAttr : SingletonMono<PlayerAttr>
         set
         {
             m_iBlood = value;
+            PostChange();
         }
     }
 
@@ -41,6 +42,11 @@ public class PlayerAttr : SingletonMono<PlayerAttr>
         get
         {
             return m_iJumpCount;
+        }
+        set
+        {
+            m_iJumpCount = value;
+            PostChange();
         }
     }
 

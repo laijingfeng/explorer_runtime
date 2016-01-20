@@ -37,16 +37,6 @@ public class TriggerBase : MonoBehaviour
     public TriggerBase m_Father;
 
     /// <summary>
-    /// 初始化
-    /// </summary>
-    public virtual void Init(TriggerBase config)
-    {
-        m_iUniqueID = config.m_iUniqueID;
-        m_bIsPassTrigger = config.m_bIsPassTrigger;
-        m_Father = config.m_Father;
-    }
-
-    /// <summary>
     /// 开始
     /// </summary>
     public virtual void Start()
@@ -83,6 +73,11 @@ public class TriggerBase : MonoBehaviour
     /// </summary>
     public virtual void OnFinish()
     {
+        if(m_bIsLive == false)
+        {
+            return;
+        }
+
         m_bIsLive = false;
 
         if (onTriggerFinish != null)
@@ -100,7 +95,8 @@ public class TriggerBase : MonoBehaviour
     {
         if (m_bIsLive)
         {
-            OnFinish();
+            Debug.LogError("hi:" + this.transform.name);
+            //OnFinish();//关闭的时候会引发很多事件，暂时去掉
         }
     }
 

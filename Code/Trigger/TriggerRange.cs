@@ -2,15 +2,10 @@
 using System.Collections;
 
 /// <summary>
-/// 时间触发器
+/// 范围触发器
 /// </summary>
-public class TriggerTimer : TriggerBase
+public class TriggerRange : TriggerBase
 {
-    /// <summary>
-    /// 等待时长
-    /// </summary>
-    public float m_fTimerTime;
-
     /// <summary>
     /// <para>物体名</para>
     /// <para>空则是隐形的</para>
@@ -19,6 +14,11 @@ public class TriggerTimer : TriggerBase
 
     void Awake()
     {
+        if (this.transform.GetComponent<BoxCollider2D>() != null)
+        {
+            this.transform.GetComponent<BoxCollider2D>().enabled = false;
+        }
+
         if (this.transform.childCount > 0)
         {
             this.transform.GetChild(0).gameObject.SetActive(false);
@@ -31,9 +31,11 @@ public class TriggerTimer : TriggerBase
     public override void OnTrigger()
     {
         base.OnTrigger();
-        
-        StopCoroutine("CountTime");
-        StartCoroutine("CountTime");
+
+        if (this.transform.GetComponent<BoxCollider2D>() != null)
+        {
+            this.transform.GetComponent<BoxCollider2D>().enabled = true;
+        }
 
         if (this.transform.childCount > 0)
         {
@@ -48,14 +50,11 @@ public class TriggerTimer : TriggerBase
         }
     }
 
-    /// <summary>
-    /// 计时
-    /// </summary>
-    /// <returns></returns>
-    private IEnumerator CountTime()
+    void OnTriggerEnter2D(Collider2D col)
     {
-        yield return new WaitForSeconds(m_fTimerTime);
-        OnFinish();
-        yield return null;
+        if (col.tag == "Player")
+        {
+            OnFinish();
+        }
     }
 }
